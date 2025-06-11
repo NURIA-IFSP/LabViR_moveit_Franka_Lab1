@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN [ -f /etc/apt/sources.list.d/ros1-latest.list ] && sed -i '/packages.ros.org/d' /etc/apt/sources.list.d/ros1-latest.list || true \
     && apt-get update \
     && apt-get install -y curl wget gnupg2 lsb-release ca-certificates sudo
-
+    
 # === INSTALA NOVA CHAVE GPG DO ROS ===
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc \
     | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg
