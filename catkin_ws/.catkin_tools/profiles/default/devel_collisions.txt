@@ -1,0 +1,6 @@
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/share/ur10_moveit_lab/cmake/ur10_moveit_labConfig.cmake 1
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/share/ur10_moveit_lab/cmake/ur10_moveit_labConfig-version.cmake 1
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/lib/pkgconfig/ur10_moveit_lab.pc 1
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/share/ur_description/cmake/ur_descriptionConfig-version.cmake 1
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/share/ur_description/cmake/ur_descriptionConfig.cmake 1
+/LabVir_moveit_ur10_lab1/catkin_ws/devel/lib/pkgconfig/ur_description.pc 1
