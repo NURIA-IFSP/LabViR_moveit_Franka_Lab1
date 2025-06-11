@@ -8,7 +8,7 @@ ARG USER_GID=$USER_UID
 ENV DEBIAN_FRONTEND=noninteractive
 
 # === INSTALA FERRAMENTAS BÁSICAS E REMOVE REPOSITÓRIO ANTIGO DO ROS ===
-RUN sed -i '/packages.ros.org/d' /etc/apt/sources.list.d/ros1-latest.list \
+RUN [ -f /etc/apt/sources.list.d/ros1-latest.list ] && sed -i '/packages.ros.org/d' /etc/apt/sources.list.d/ros1-latest.list || true \
     && apt-get update \
     && apt-get install -y curl wget gnupg2 lsb-release ca-certificates sudo
 
