@@ -55,7 +55,7 @@ RUN rosdep init && \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     xfce4 xfce4-terminal \
-    novnc websockify xterm x11vnc net-tools \
+    novnc websockify xterm x11vnc net-tools iproute2 \
     python3-pip libgl1-mesa-dri libgl1-mesa-glx dbus-x11 mesa-utils \
     x11-utils x11-xserver-utils wmctrl xdotool firefox autocutsel && \
     apt-get clean
