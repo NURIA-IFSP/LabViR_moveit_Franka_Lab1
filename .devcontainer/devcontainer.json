@@ -1,4 +1,3 @@
-// schema validation disabled to avoid HTTP 429 errors
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
   "name": "noetic_ros_lab1",
@@ -10,7 +9,7 @@
     "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
     "--shm-size=2g"
   ],
-  "forwardPorts": [6080, 5901], // <-- adiciona 5901 aqui
+  "forwardPorts": [6080, 5901],
   "portsAttributes": {
     "6080": {
       "label": "noVNC Desktop",
@@ -54,5 +53,7 @@
       "installExtensions": true,
       "omitDesktopApps": true
     }
-  }
+  },
+  "remoteUser": "ubuntu",
+  "postCreateCommand": "if [ -f catkin_ws/src/CMakeLists.txt ]; then cd catkin_ws && catkin build; fi"
 }

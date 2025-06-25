@@ -101,6 +101,16 @@ RUN echo "source /opt/ros/noetic/setup.bash" >> /home/$USERNAME/.bashrc && \
 # === COPIA O WORKSPACE ===
 COPY catkin_ws /home/$USERNAME/catkin_ws
 
+RUN echo '\
+# Ativa catkin_ws externo se montado, senão usa o interno\n\
+if [ -f "/LabVir_noetic_lab/catkin_ws/devel/setup.bash" ]; then\n\
+  source /LabVir_noetic_lab/catkin_ws/devel/setup.bash\n\
+elif [ -f "/home/ubuntu/catkin_ws/devel/setup.bash" ]; then\n\
+  source /home/ubuntu/catkin_ws/devel/setup.bash\n\
+fi' >> /home/$USERNAME/.bashrc && \
+    sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/catkin_ws
+
+
 RUN echo "source /home/$USERNAME/catkin_ws/devel/setup.bash" >> /home/$USERNAME/.bashrc && \
     sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/catkin_ws
 
