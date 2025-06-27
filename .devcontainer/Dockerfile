@@ -44,6 +44,7 @@ RUN sudo apt update && sudo apt upgrade -y && \
     ros-noetic-serial \
     ros-noetic-rqt-joint-trajectory-controller \
     libpoco-dev \
+    ros-noetic-moveit-visual-tools \
     python3-wstool
 
 # === CONFIGURA ROSDEP (COMO ROOT) ===

@@ -2,10 +2,10 @@ moveit_setup_assistant_config:
   URDF:
     package: franka_description
     relative_path: robots/panda/panda.urdf.xacro
-    xacro_args: hand:=true
+    xacro_args: hand:=true gazebo:=true
   SRDF:
     relative_path: config/panda.srdf
   CONFIG:
     author_name: LCMO
     author_email: lcmo@mail.com
-    generated_timestamp: 1750879928
+    generated_timestamp: 1750973912
