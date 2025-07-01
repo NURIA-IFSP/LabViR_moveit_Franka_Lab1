@@ -1,48 +1,14 @@
-# Laboratório Virtual de RObótica - Ambiente ROS Noetic
+## Franka Emika e Moveit! com o Gazebo
 
-Este é o ambiente de desenvolvimento do LabVir com o ROS 1 - noetic
+Simulação do robo [Franka Emika](https://franka.de/) no Gazebo com o Moveit!
 
-Os pacotes instalados são:
+# Pacotes instalados
 
-
-# Pacotes ROS 1 Noetic Instalados
-
-## Ferramentas Essenciais
-- `git` e `nano`: Versionamento e editor de texto básico
-- `python-is-python3`: Garante compatibilidade com Python 3 (padrão no ROS Noetic)
-- `python3-catkin-tools` e `ros-noetic-catkin`: Ferramentas para compilação de workspace ROS
-
-## Pacotes Básicos ROS
-- `ros-noetic-ros-tutorials`: Tutoriais oficiais ROS (pacotes de exemplo)
-- `ros-noetic-serial`: Comunicação serial com dispositivos externos
-
-## Simulação e Visualização
-- `ros-noetic-gazebo-ros-pkgs`: Integração entre ROS e Gazebo
-- `ros-noetic-gazebo-ros-control`: Plugins de controle para simulação no Gazebo
-- `ros-noetic-rviz-visual-tools`: Ferramentas visuais para RVIZ
-- `liburdfdom-tools`: Utilitários para trabalhar com arquivos URDF (modelos de robôs)
-
-## Controle de Robôs
-- `ros-noetic-ros-control`: Framework padrão para controle de robôs
-- `ros-noetic-ros-controllers`: Controladores ROS pré-implementados
-- `ros-noetic-effort-controllers`: Controladores para joints com esforço/torque
-- `ros-noetic-rqt-joint-trajectory-controller`: Interface RQT para controladores de trajetória
-
-## Movimento e Planejamento
-- `ros-noetic-moveit`: Framework completo para movimento e manipulação robótica
-
-## Dependências Adicionais
-- `libpoco-dev`: Bibliotecas para desenvolvimento de redes
-- `python3-wstool`: Ferramenta para gerenciamento de workspaces ROS
-
-> **Nota**: Esta combinação de pacotes é ideal para desenvolvimento com:
-> - Simulação no Gazebo
-> - Controle de robôs reais
-> - Aplicações de manipulação robótica
-> - Visualização avançada no RVIZ
+- franka_description - Arquivos urdf, xacro que descrevem o robo
+- panda_moveit_config - Configurações do Moveit! para o robo
+- franka_moveit_sim - Pacote com os scripts de simulação do robo
 
 ---
-
 
 # Como executar:
 
@@ -65,13 +31,13 @@ Você pode executar em sua máquina local ou via GitHub Codespaces. Se for execu
 2. Baixar o repositorio em sua máquina local:
 
     ```bash
-    git clone https://github.com/NURIA-IFSP/LabVir_noetic_lab.git
+    git clone https://github.com/NURIA-IFSP/LabVir_moveit_Franka_Lab1.git
     ```
 
 3. Abrir o vscode no diretório do projeto:
 
     ```bash
-    code LabVir_noetic_lab
+    code LabVir_moveit_Franka_Lab1
     ```
 
 4. Garanta que o docker esteja instalado e rodando:
@@ -114,7 +80,7 @@ Você pode executar em sua máquina local ou via GitHub Codespaces. Se for execu
 Na execução via github Codespaces você não precisará instalar nada em seu computador, terá apenas que ter uma conta no github.
 
 1. Acesse o repositório do projeto no github:
-    [https://github.com/NURIA-IFSP/LabVir_noetic_lab](https://github.com/NURIA-IFSP/LabVir_noetic_lab)
+    [https://github.com/NURIA-IFSP/LabVir_moveit_Franka_Lab1](https://github.com/NURIA-IFSP/LabVir_moveit_Franka_Lab1)
     - Clique no botão "Code" e selecione "Codespaces"
     - O ambiente começará a ser montado no Codespaces (isso pode levar alguns minutos)
 
@@ -123,3 +89,44 @@ Na execução via github Codespaces você não precisará instalar nada em seu c
 3. Avisos Importantes para simulação usando Codespaces:
     - Após a execução do ambiente você deverá clicar no botão "Stop" para encerrar o ambiente.
     - A execução de ambientes de desenvolvimento é cobrada pelo github, havendo um limite atual de 60 horas de execução por mês, ou 180 horas por mês para usuários com acesso premium. Estudantes e professores podem ter o limite aumentado.
+
+
+## Execução das simulações
+
+1. Verificação do robô no Rviz
+
+```bash
+    roslaunch panda_moveit_config demo.launch
+```
+
+Na aba planning escolha algumas posições preé-definidas e clique em Plan e Execute para executar a trajetória.
+
+
+2. Verificação do robô no Gazebo
+
+Em um terminal execute:
+```bash
+    roslaunch panda_moveit_config gazebo.launch
+```
+Isso irá abrir o Gazebo e carregar o Franka Emika.
+
+Num outro terminal:
+```bash
+    rosrun rqt_joint_trajectory rqt_joint_trajectory 
+```
+
+Selecione o controlador e o grupo e clique em "Start"
+
+Ao movimentar as juntas no rqt_joint_controller o robô deve se movimentar no Gazebo.
+
+3. Verificação do robô no Gazebo no ambiente simulado LabWorld2
+
+Em um terminal execute:
+```bash
+    roslaunch franka_moveit_sim franka_gazebo.launch
+```
+
+Deverão abrir duas janelas. Uma do Simulador Gazebo e outra do Rviz.
+__Atenção:__ o simulador Gazebo pode demorar alguns minutos para abrir. Tenha paciência.
+
+Na janela do Rviz será possível definir uma posição para o robô que irá se movimentar no ambiente simulado.
