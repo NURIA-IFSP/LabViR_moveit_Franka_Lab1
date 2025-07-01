@@ -3,8 +3,8 @@
   <!-- Gazebo options -->
   <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
-  <arg name="world_name" default="$(find gazebo_ros)/launch/empty_world.launch" doc="Gazebo world file"/>
-  <arg name="world_pose" default="-x 0.0 -y -0.0 -z 0.0 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
+  <arg name="world_name" default="$(find franka_moveit_sim)/worlds/TheLab2.world" doc="Gazebo world file"/>
+  <arg name="world_pose" default="-x 0.1 -y -0.20 -z 0.85 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
   <arg name="initial_joint_positions" default=" -J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728" doc="Initial joint configuration of the robot"/>
 
   <!-- Start Gazebo paused to allow the controllers to pickup the initial pose -->
