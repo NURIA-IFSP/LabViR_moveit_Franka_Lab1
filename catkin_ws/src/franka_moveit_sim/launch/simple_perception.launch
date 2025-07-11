@@ -42,6 +42,7 @@
     <arg name="load_robot_description"    value="false"/>
     <arg name="moveit_controller_manager" value="ros_control"/>
     <arg name="broadcast_static_tf"       value="false"/>
+     <arg name="info" value="true"/><!-- publish grasp markers -->
     <arg name="rviz_config" value="/LabVir_moveit_Franka_Lab1/catkin_ws/src/franka_moveit_sim/launch/rviz_kinect.rviz"/>
   </include>
 

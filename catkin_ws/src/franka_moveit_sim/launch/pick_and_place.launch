@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- Start Simple_perception.launch --> 
+    <include file="$(find franka_moveit_sim)/launch/simple_perception.launch" >
+  </include>
+
+  <!-- Drive to the table, pick stuff up -->
+    <node name="pick_and_place_demo" pkg="simple_grasping" type="pick_and_place.py" output="screen" />
+
+</launch>
