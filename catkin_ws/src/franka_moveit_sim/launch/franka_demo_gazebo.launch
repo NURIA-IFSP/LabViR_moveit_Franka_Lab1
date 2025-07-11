@@ -1,21 +1,62 @@
 <?xml version="1.0"?>
 <launch>
-  <!-- MoveIt options -->
-  <arg name="pipeline" default="ompl" doc="Planning pipeline to use with MoveIt"/>
 
-  <!-- Gazebo options -->
-  <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
-  <arg name="paused" default="false" doc="Start Gazebo paused"/>
-  <arg name="world_pose" default="-x 0.1 -y -0.20 -z 0.85 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
-  <arg name="initial_joint_positions" default=" -J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728" doc="Initial joint configuration of the robot"/>
+  <!-- ==========  POSE DO ROBÔ (passe outros valores na linha de comando)  ========== -->
+  <arg name="x" default="-1.2"/>
+  <arg name="y" default="-1.6"/>
+  <arg name="z" default="1.01"/>
+  <arg name="R" default="0"/>         
+  <arg name="P" default="0"/>          
+  <arg name="Y" default="-1.57"/>     
 
-  <!-- Launch Gazebo and spawn the robot -->
-  <include file="$(dirname)/gazebo_franka.launch" pass_all_args="true"/>
+  <!-- ==========  OUTRAS OPÇÕES  ========== -->
+  <arg name="gazebo_gui" default="true"/>
+  <arg name="paused"     default="false"/>
+  <arg name="pipeline"   default="ompl"/>
+  <arg name="initial_joint_positions"
+       default="-J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728"/>
 
-  <!-- Launch MoveIt -->
-  <include file="$(find panda_moveit_config)/launch/demo.launch" pass_all_args="true">
-    <!-- robot_description is loaded by gazebo.launch, to enable Gazebo features -->
-    <arg name="load_robot_description" value="false" />
-    <arg name="moveit_controller_manager" value="ros_control" />
+  <!-- ==========  1) GAZEBO: mundo + spawn do robô  ========== -->
+  <include file="$(dirname)/gazebo_franka.launch">
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <arg name="R" value="$(arg R)"/>
+    <arg name="P" value="$(arg P)"/>
+    <arg name="Y" value="$(arg Y)"/>
+
+    <!-- repassa também as demais flags -->
+    <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
+    <arg name="paused"     value="$(arg paused)"/>
+    <arg name="initial_joint_positions" value="$(arg initial_joint_positions)"/>
   </include>
+
+  <!-- ==========  2) TF ESTÁTICO world → panda_link0 (para RViz / MoveIt)  ========== -->
+  <!-- tf/static_transform_publisher usa:  x y z  yaw pitch roll -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="panda_pose_pub"
+        args="$(arg x) $(arg y) $(arg z)  $(arg Y) $(arg P) $(arg R)  world panda_link0 100"/>
+   -->
+  <!-- quaternion para yaw = -1.57 rad (roll=pitch=0) -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="panda_pose_pub"
+      args="$(arg x) $(arg y) $(arg z) 0 0 -0.7071068 0.7071068 world panda_link0"/>
+
+  <!-- ==========  3) MOVEIT + RViz  ========== -->
+  <!-- - robot_description já veio do Gazebo                               -->
+  <!-- - NÃO re-publica outro TF fixo                                      -->
+  <include file="$(find panda_moveit_config)/launch/demo.launch">
+    <arg name="load_robot_description" value="false"/>
+    <arg name="moveit_controller_manager" value="ros_control"/>
+
+    <!-- desliga o TF interno do demo.launch -->
+    <arg name="broadcast_static_tf" value="false"/>
+
+    <!-- passa a mesma pose para coerência, caso alguém use -->
+    <arg name="base_x"    value="$(arg x)"/>
+    <arg name="base_y"    value="$(arg y)"/>
+    <arg name="base_z"    value="$(arg z)"/>
+    <arg name="base_roll" value="$(arg R)"/>
+    <arg name="base_pitch" value="$(arg P)"/>
+    <arg name="base_yaw"   value="$(arg Y)"/>
+  </include>
+
 </launch>

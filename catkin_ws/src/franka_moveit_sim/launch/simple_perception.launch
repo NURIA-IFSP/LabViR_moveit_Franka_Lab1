@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- ========== POSE DO ROBÔ (mude na linha de comando se quiser) ========== -->
+  <arg name="x" default="-0.825"/>
+  <arg name="y" default="-1.25"/>
+  <arg name="z" default="1.02"/>
+  <arg name="R" default="0"/>
+  <arg name="P" default="0"/>
+  <arg name="Y" default="-1.57"/>
+
+  <!-- ========== OUTRAS OPÇÕES ========== -->
+  <arg name="gazebo_gui" default="true"/>
+  <arg name="paused"     default="false"/>
+  <arg name="pipeline"   default="ompl"/>
+  <arg name="frame_id"   default="world"/>
+  <arg name="initial_joint_positions"
+       default="-J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728"/>
+
+  <!-- ========== 1) TF ESTÁTICO world → panda_link0 (publicado antes do MoveIt) ========== -->
+  <!-- tf2_ros/static_transform_publisher   x y z qx qy qz qw parent child -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="panda_pose_pub"
+        args="$(arg x) $(arg y) $(arg z) 0 0 -0.7071068 0.7071068 world panda_link0"/>
+
+  <!-- ========== 2) GAZEBO: carrega o robô ========== -->
+  <include file="$(dirname)/gazebo_franka.launch">
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <arg name="R" value="$(arg R)"/>
+    <arg name="P" value="$(arg P)"/>
+    <arg name="Y" value="$(arg Y)"/>
+    <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
+    <arg name="paused"     value="$(arg paused)"/>
+    <arg name="initial_joint_positions" value="$(arg initial_joint_positions)"/>
+    <arg name="world_name" default="$(find franka_moveit_sim)/worlds/SimpleLab.world" doc="Gazebo world file"/>
+    <arg name="model_name" value="franka"/>
+  </include>
+
+  <!-- ========== 3) MOVEIT + RViz (sem publicar outro TF fixo) ========== -->
+  <include file="$(find panda_moveit_config)/launch/demo.launch">
+    <arg name="load_robot_description"    value="false"/>
+    <arg name="moveit_controller_manager" value="ros_control"/>
+    <arg name="broadcast_static_tf"       value="false"/>
+    <arg name="rviz_config" value="/LabVir_moveit_Franka_Lab1/catkin_ws/src/franka_moveit_sim/launch/rviz_kinect.rviz"/>
+  </include>
+
+  <!-- ========== 4) TFs DA CÂMERA KINECT ========== -->
+  <!-- 4.1 posição física -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect_pose_pub"
+        args="0 0 1.38  0 0 0 1  world kinect_link"/>
+  <!-- 4.2 rotação óptica REP-103 (-90° Y, -90° Z) -->
+  <node pkg="tf2_ros" type="static_transform_publisher"
+      name="kinect_optical_pub"
+      args="0 0 0  -0.7071068 0 0 0.7071068   kinect_link  kinect_rgb_optical_frame"/>
+
+
+  <!-- ========== 5) Nó de percepção simple_grasping ========== -->
+  <node name="basic_grasping_perception" pkg="simple_grasping" type="basic_grasping_perception" output="screen">
+    <rosparam command="load"
+              file="$(find simple_grasping)/config/simple_grasping.yaml"/>
+    <param name="frame_id" value="$(arg frame_id)"/>
+    <remap from="/head_camera/depth_registered/points" to="/kinect/points"/>
+  </node>
+
+</launch>

@@ -1,0 +1,7 @@
+simple_grasping_tc/simple_grasping
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/share/simple_grasping/cmake/simple_graspingConfig.cmake /LabVir_moveit_Franka_Lab1/catkin_ws/devel/share/simple_grasping/cmake/simple_graspingConfig.cmake
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/share/simple_grasping/cmake/simple_graspingConfig-version.cmake /LabVir_moveit_Franka_Lab1/catkin_ws/devel/share/simple_grasping/cmake/simple_graspingConfig-version.cmake
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/lib/libsimple_grasping.so /LabVir_moveit_Franka_Lab1/catkin_ws/devel/lib/libsimple_grasping.so
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/lib/simple_grasping/basic_grasping_perception /LabVir_moveit_Franka_Lab1/catkin_ws/devel/lib/simple_grasping/basic_grasping_perception
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/lib/simple_grasping/grasp_planner_node /LabVir_moveit_Franka_Lab1/catkin_ws/devel/lib/simple_grasping/grasp_planner_node
+/LabVir_moveit_Franka_Lab1/catkin_ws/devel/.private/simple_grasping/lib/pkgconfig/simple_grasping.pc /LabVir_moveit_Franka_Lab1/catkin_ws/devel/lib/pkgconfig/simple_grasping.pc

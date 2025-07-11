@@ -1,11 +1,23 @@
 <?xml version="1.0"?>
 <launch>
+      
+  <!-- Posição para carregar o robo na simulação do Gazebo  -->
+  <arg name="x" default="-1.2"/>
+  <arg name="y" default="-1.6"/>
+  <arg name="z" default="1.02"/>
+  <arg name="R" default="0"/>
+  <arg name="P" default="0"/>
+  <arg name="Y" default="-1.57"/>
+
+  <!-- ======= NOVO: nome do modelo ========= -->
+  <arg name="model_name"   default="franka"/>
+  
   <!-- Gazebo options -->
   <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
-  <arg name="world_name" default="$(find franka_moveit_sim)/worlds/TheLab2.world" doc="Gazebo world file"/>
-  <arg name="world_pose" default="-x 0.1 -y -0.20 -z 0.85 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
-  <arg name="initial_joint_positions" default=" -J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728" doc="Initial joint configuration of the robot"/>
+  <arg name="world_name" default="$(find franka_moveit_sim)/worlds/TheLab3.world" doc="Gazebo world file"/>
+  <arg name="world_pose" default="-x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)" doc="Pose to spawn the robot at"/> 
+  <arg name="initial_joint_positions" default="-J panda_finger_joint1 0 -J panda_joint1 0 -J panda_joint2 0 -J panda_joint3 2.8973 -J panda_joint4 -0.0698 -J panda_joint5 0 -J panda_joint6 3.14 -J panda_joint7 0.728" doc="Initial joint configuration of the robot"/>
 
   <!-- Start Gazebo paused to allow the controllers to pickup the initial pose -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" pass_all_args="true">
@@ -18,10 +30,13 @@
   <!-- Unpause the simulation after loading the robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />
 
-  <!-- Spawn the robot in Gazebo -->
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
-        args="-urdf -param robot_description -model robot $(arg unpause) $(arg world_pose) $(arg initial_joint_positions)"
-        respawn="false" output="screen" />
+  <!-- SPAWN usando o nome escolhido -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_$(arg model_name)"
+      args="-urdf -param robot_description -model $(arg model_name) -unpause
+            -x $(arg x) -y $(arg y) -z $(arg z)
+            -R $(arg R) -P $(arg P) -Y $(arg Y)
+            $(arg initial_joint_positions)"
+      output="screen"/>
 
   <!-- Load all controllers and spawn them -->
   <rosparam file="$(find panda_moveit_config)/config/gazebo_controllers.yaml" />

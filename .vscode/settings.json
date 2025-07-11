@@ -8,5 +8,6 @@
     "markdown.showPreviewToSide": true,
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
-    }
+    },
+    "ros.distro": "noetic"
 }

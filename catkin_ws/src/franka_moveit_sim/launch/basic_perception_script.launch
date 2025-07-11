@@ -1,0 +1,23 @@
+<launch>
+  <arg name="frame_id" default="world"/>
+
+  <!-- Start Perception -->
+  <node name="basic_grasping_perception"
+        pkg="simple_grasping"
+        type="basic_grasping_perception"
+        output="screen">
+
+    <!-- carrega todos os demais parâmetros -->
+    <rosparam command="load"
+              file="$(find simple_grasping)/config/simple_grasping.yaml" />
+
+    <!-- força o frame de referência a ser “world” -->
+    <param name="frame_id" value="$(arg frame_id)"/>
+
+    <!-- remapeia a nuvem de pontos da câmera -->
+    <remap from="/head_camera/depth_registered/points"
+           to="/kinect/points"/>
+
+  </node>
+
+</launch>

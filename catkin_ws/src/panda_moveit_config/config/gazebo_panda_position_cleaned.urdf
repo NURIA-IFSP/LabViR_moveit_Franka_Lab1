@@ -19,6 +19,8 @@
     </inertial>
   </link>
   
+  
+
   <link name="panda_link0_sc" />
   
   <joint name="panda_link0_sc_joint" type="fixed">
@@ -413,12 +415,16 @@
     <mimic joint="panda_finger_joint1" />
     <dynamics damping="0.3" />
   </joint>
+  <!-- Eliminado para que o rviz e o moveit possam carregar o robo na posição do gazebo -->
   <link name="world" />
   <joint name="world_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0" />
     <parent link="world" />
     <child link="panda_link0" />
   </joint>
+  
+    
+    
   <gazebo reference="panda_joint1">
     
     <provideFeedback>true</provideFeedback>
@@ -610,9 +616,6 @@
       <surface>
         <contact>
           <ode>
-            
-            
-            
             <max_vel>0</max_vel>
             <min_depth>0.001</min_depth>
           </ode>
@@ -651,9 +654,9 @@
     </collision>
   </gazebo>
   <gazebo>
+    
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <controlPeriod>0.001</controlPeriod>
-      
+      <controlPeriod>0.001</controlPeriod> 
     </plugin>
     <self_collide>true</self_collide>
   </gazebo>

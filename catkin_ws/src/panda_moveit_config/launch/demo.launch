@@ -1,4 +1,14 @@
 <launch>
+  
+  <!-- Argumentos para publicar ou não o TF da base do robo na posição real da simulação o Gazebo -->
+  <arg name="broadcast_static_tf" default="true"/>         <!-- se 'false', nada é publicado -->
+  <arg name="base_x"    default="0"/>
+  <arg name="base_y"    default="0"/>
+  <arg name="base_z"    default="0"/>
+  <arg name="base_roll"  default="0"/>
+  <arg name="base_pitch" default="0"/>
+  <arg name="base_yaw"   default="0"/>
+  <arg name="rviz_config" default="$(find panda_moveit_config)/launch/moveit.rviz"/>
 
   <!-- specify the planning pipeline -->
   <arg name="pipeline" default="ompl" />
@@ -23,8 +33,14 @@
   <arg name="use_gui" default="false" />
   <arg name="use_rviz" default="true" />
 
-  <!-- If needed, broadcast static tf for robot root -->
-  <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world panda_link0" />
+  <!-- =====================  TF só se for pedido  =========================== -->
+  <!-- Publica a base do robô na origem (só quando demo.launch roda sozinho) -->
+<group if="$(arg broadcast_static_tf)">
+  <!-- x y z   YAW pitch roll   parent child period_ms -->
+  <node pkg="tf" type="static_transform_publisher"
+        name="virtual_joint_broadcaster_0"
+        args="$(arg base_x) $(arg base_y) $(arg base_z) $(arg base_yaw) $(arg base_pitch) $(arg base_roll) world panda_link0 100"/>
+</group>
 
   <group if="$(eval arg('moveit_controller_manager') == 'fake')">
     <!-- We do not have a real robot connected, so publish fake joint states via a joint_state_publisher
@@ -55,8 +71,8 @@
 
   <!-- Run Rviz and load the default config to see the state of the move_group node -->
   <include file="$(dirname)/moveit_rviz.launch" if="$(arg use_rviz)">
-    <arg name="rviz_config" value="$(dirname)/moveit.rviz"/>
-    <arg name="debug" value="$(arg debug)"/>
+     <arg name="rviz_config" value="$(arg rviz_config)"/>
+     <arg name="debug" value="$(arg debug)"/>
   </include>
 
   <!-- If database loading was enabled, start mongodb as well -->

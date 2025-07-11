@@ -39,8 +39,8 @@ sleep 2
 echo "Iniciando TurboVNC no display $DISPLAY..."
 vncserver $DISPLAY -geometry ${WIDTH}x${HEIGHT} -depth 24 \
     -xstartup "$HOME/.vnc/xstartup.turbovnc" \
-    -securitytypes TLSNone \
-    -noxstartup
+    -securitytypes TLSNone 
+    #-noxstartup	# alterado para execução do container localmente
 
 # Verifica se o VNC subiu corretamente
 if ss -tuln | grep ":5901" >/dev/null; then
