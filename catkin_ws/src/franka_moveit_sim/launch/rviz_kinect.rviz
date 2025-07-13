@@ -6,11 +6,8 @@ Panels:
       Expanded:
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
-        - /PointCloud21
-        - /TF1/Frames1
-        - /RobotModel1/Links1
       Splitter Ratio: 0.5
-    Tree Height: 357
+    Tree Height: 140
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -54,7 +51,7 @@ Visualization Manager:
       Value: true
     - Acceleration_Scaling_Factor: 0.5
       Class: moveit_rviz_plugin/MotionPlanning
-      Enabled: false
+      Enabled: true
       JointsTab_Use_Radians: true
       Move Group Namespace: ""
       MoveIt_Allow_Approximate_IK: false
@@ -84,6 +81,109 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          panda_hand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_hand_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_hand_tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_leftfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link0_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link1_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link2_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link3_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link4_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link5_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link6_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link7_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link8:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_rightfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
         Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
@@ -130,10 +230,113 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
+          panda_hand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_hand_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_hand_tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_leftfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link0_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link1_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link2_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link3_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link4_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link5_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link6_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          panda_link7_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_link8:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          panda_rightfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
         Robot Alpha: 0.5
         Show Robot Collision: false
         Show Robot Visual: true
-      Value: false
+      Value: true
       Velocity_Scaling_Factor: 0.1
     - Class: rviz/Image
       Enabled: true
@@ -170,7 +373,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /basic_grasping_perception/object_cloud
+      Topic: /kinect/points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -185,62 +388,12 @@ Visualization Manager:
       Show Trail: false
       Value: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        kinect_link:
-          Value: false
-        kinect_rgb_optical_frame:
-          Value: true
-        panda_hand:
-          Value: false
-        panda_hand_sc:
-          Value: false
-        panda_hand_tcp:
-          Value: false
-        panda_leftfinger:
-          Value: false
-        panda_link0:
-          Value: false
-        panda_link0_sc:
-          Value: false
-        panda_link1:
-          Value: false
-        panda_link1_sc:
-          Value: false
-        panda_link2:
-          Value: false
-        panda_link2_sc:
-          Value: false
-        panda_link3:
-          Value: false
-        panda_link3_sc:
-          Value: false
-        panda_link4:
-          Value: false
-        panda_link4_sc:
-          Value: false
-        panda_link5:
-          Value: false
-        panda_link5_sc:
-          Value: false
-        panda_link6:
-          Value: false
-        panda_link6_sc:
-          Value: false
-        panda_link7:
-          Value: false
-        panda_link7_sc:
-          Value: false
-        panda_link8:
-          Value: false
-        panda_rightfinger:
-          Value: false
-        world:
-          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -248,61 +401,127 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          kinect_link:
-            kinect_rgb_optical_frame:
-              {}
-          panda_link0:
-            panda_link0_sc:
-              {}
-            panda_link1:
-              panda_link1_sc:
-                {}
-              panda_link2:
-                panda_link2_sc:
-                  {}
-                panda_link3:
-                  panda_link3_sc:
-                    {}
-                  panda_link4:
-                    panda_link4_sc:
-                      {}
-                    panda_link5:
-                      panda_link5_sc:
-                        {}
-                      panda_link6:
-                        panda_link6_sc:
-                          {}
-                        panda_link7:
-                          panda_link7_sc:
-                            {}
-                          panda_link8:
-                            panda_hand:
-                              panda_hand_sc:
-                                {}
-                              panda_hand_tcp:
-                                {}
-                              panda_leftfinger:
-                                {}
-                              panda_rightfinger:
-                                {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        panda_hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_hand_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_hand_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_leftfinger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link0_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link1_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link2_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link3_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link4_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link5_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link6_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link7_sc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_rightfinger:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
   Enabled: true
   Global Options:
@@ -320,7 +539,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.869778633117676
+      Distance: 5.501271724700928
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -328,22 +547,22 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: 0.6854294538497925
-        Y: 0.415086954832077
-        Z: 0.3956630825996399
+        X: -0.5730303525924683
+        Y: 0.11242842674255371
+        Z: 0.35524091124534607
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.15000000596046448
+      Pitch: 0.31979626417160034
       Target Frame: world
-      Yaw: 4.14995002746582
+      Yaw: 0.9531344771385193
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 816
+  Height: 691
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -354,11 +573,11 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001ca000002dafc020000000bfb000000100044006900730070006c006100790073010000003b000001a0000000c700fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a005600690065007700730000000108000000a4000000a000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001360000003f0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000108000001740000016900fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006900000003060000003f0000003f00fffffffb000000100044006900730070006c0061007900730000000277000000c7000000c700fffffffb0000000c00430061006d0065007200610000000277000000c70000000000000000fb0000000a0049006d00610067006501000001e1000001340000001600ffffff00000315000002da00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000001ca0000025dfc020000000bfb000000100044006900730070006c006100790073010000003b000000c7000000c700fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a005600690065007700730000000108000000a4000000a000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001360000003f0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000108000001740000016900fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006900000003060000003f0000003f00fffffffb000000100044006900730070006c0061007900730000000277000000c7000000c700fffffffb0000000c00430061006d0065007200610000000277000000c70000000000000000fb0000000a0049006d0061006700650100000282000000160000001600ffffff0000015d0000025d00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RvizVisualToolsGui:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1253
-  X: 568
-  Y: 42
+  Width: 813
+  X: 116
+  Y: 27

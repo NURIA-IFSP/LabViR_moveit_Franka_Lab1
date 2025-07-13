@@ -1,7 +1,7 @@
 <launch>
   
   <!-- Argumentos para publicar ou não o TF da base do robo na posição real da simulação o Gazebo -->
-  <arg name="broadcast_static_tf" default="true"/>         <!-- se 'false', nada é publicado -->
+  <arg name="broadcast_static_tf" default="false"/>         <!-- se 'false', nada é publicado -->
   <arg name="base_x"    default="0"/>
   <arg name="base_y"    default="0"/>
   <arg name="base_z"    default="0"/>

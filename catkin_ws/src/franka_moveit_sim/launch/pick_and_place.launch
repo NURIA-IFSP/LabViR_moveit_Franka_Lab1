@@ -5,6 +5,6 @@
   </include>
 
   <!-- Drive to the table, pick stuff up -->
-    <node name="pick_and_place_demo" pkg="simple_grasping" type="pick_and_place.py" output="screen" />
+    <node name="pick_and_place_demo" pkg="simple_grasping" type="pick_and_place2.py" output="screen" />
 
 </launch>

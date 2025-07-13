@@ -54,26 +54,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='coke_can'>
-        <pose>-1.00 -0.50 1.01 0.019401 -0.022795 0.000652</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-1.00 -0.50 1.01 0.019401 -0.022795 0.000652</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.097819 0.11328 -0.024091 1.14836 -1.42997 -3.04039</acceleration>
-          <wrench>-0.03815 0.044179 -0.009396 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='coke_can_clone'>
-        <pose>-1.00 -0.25 1.01 0.019401 -0.022795 0.000652</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-1.00 -0.25 1.01 0.019401 -0.022795 0.000652</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.097819 0.11328 -0.024091 1.14836 -1.42997 -3.04039</acceleration>
-          <wrench>-0.03815 0.044179 -0.009396 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='coke_can_clone_0'>
         <pose>-1.0 0.0 1.01 -0.012989 -0.028491 -0.00169</pose>
         <scale>1 1 1</scale>

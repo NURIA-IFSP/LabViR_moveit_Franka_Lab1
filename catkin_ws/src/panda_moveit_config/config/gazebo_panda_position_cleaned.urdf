@@ -418,7 +418,7 @@
   <!-- Eliminado para que o rviz e o moveit possam carregar o robo na posição do gazebo -->
   <link name="world" />
   <joint name="world_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0" />
+    <origin rpy="0 0 -1.5708" xyz="-1.0 -0.6 1.02" />
     <parent link="world" />
     <child link="panda_link0" />
   </joint>
