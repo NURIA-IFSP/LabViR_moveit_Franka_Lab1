@@ -1,0 +1,35 @@
+rosrun gazebo_ros spawn_model -file /LabVir_moveit_Franka_Lab1/catkin_ws/src/franka_moveit_sim/urdf/table.urdf -urdf -model table -x 1.30 -y 0 -z 0
+
+rosrun gazebo_ros spawn_model -file /LabVir_moveit_Franka_Lab1/catkin_ws/src/franka_moveit_sim/urdf/demo_cube.urdf -urdf -model demo_cube -x 1.30 -y 0 -z 0.675
+
+roslaunch simple_grasping basic_perception_dbg.launch
+
+rostopic list
+
+Devera gerar o action server find_objects abaixo:
+/basic_grasping_perception/find_objects/cancel
+/basic_grasping_perception/find_objects/feedback
+/basic_grasping_perception/find_objects/goal
+/basic_grasping_perception/find_objects/result
+/basic_grasping_perception/find_objects/status
+
+E os seguintes tópicos:
+/basic_grasping_perception/object_cloud
+/basic_grasping_perception/support_cloud
+
+Para detectar os objetos é necessário executar a açao:
+
+rostopic pub /basic_grasping_perception/find_objects/goal grasping_msgs/FindGraspableObjectsActionGoal "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'world'
+goal_id:
+  stamp:
+    secs: 0
+    nsecs: 0
+  id: ''
+goal:
+  plan_grasps: false"
+

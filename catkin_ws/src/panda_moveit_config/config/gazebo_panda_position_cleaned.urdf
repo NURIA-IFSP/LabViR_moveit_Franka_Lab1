@@ -412,13 +412,12 @@
     <origin rpy="0 0 0" xyz="0 0 0.0584" />
     <axis xyz="0 -1 0" />
     <limit effort="100" lower="0.0" upper="0.04" velocity="0.2" />
-    <mimic joint="panda_finger_joint1" />
     <dynamics damping="0.3" />
   </joint>
   <!-- Eliminado para que o rviz e o moveit possam carregar o robo na posição do gazebo -->
   <link name="world" />
   <joint name="world_joint" type="fixed">
-    <origin rpy="0 0 -1.5708" xyz="-1.0 -0.6 1.02" />
+    <origin rpy="0 0 -1.5708" xyz="-1.0 -0.9 1.02" />
     <parent link="world" />
     <child link="panda_link0" />
   </joint>
@@ -596,10 +595,7 @@
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <gazebo reference="panda_finger_joint2">
-    
-    <provideFeedback>true</provideFeedback>
-  </gazebo>
+  
   <transmission name="panda_finger_joint2_transmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="panda_finger_joint2">
@@ -659,5 +655,10 @@
       <controlPeriod>0.001</controlPeriod> 
     </plugin>
     <self_collide>true</self_collide>
+  </gazebo>
+
+  <gazebo reference="panda_finger_joint2">
+   
+    <provideFeedback>true</provideFeedback>
   </gazebo>
 </robot>

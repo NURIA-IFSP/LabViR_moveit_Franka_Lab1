@@ -33,7 +33,7 @@
     <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
     <arg name="paused"     value="$(arg paused)"/>
     <arg name="initial_joint_positions" value="$(arg initial_joint_positions)"/>
-    <arg name="world_name" default="$(find franka_moveit_sim)/worlds/SimpleLab2.world" doc="Gazebo world file"/>
+    <arg name="world_name" default="$(find franka_moveit_sim)/worlds/SimpleLab3.world" doc="Gazebo world file"/>
     <arg name="model_name" value="franka"/>
   </include>
 

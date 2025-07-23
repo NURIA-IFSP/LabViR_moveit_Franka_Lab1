@@ -1,0 +1,24 @@
+[INFO] [1753105012.429905, 1025.063000]: Waiting for get_planning_scene
+[INFO] [1753105012.468234, 1025.078000]: Connecting to pickup action...
+[INFO] [1753105012.766725, 1025.219000]: ...connected
+[INFO] [1753105012.774223, 1025.223000]: Connecting to place action...
+[INFO] [1753105012.991189, 1025.290000]: ...connected
+[INFO] [1753105013.310722, 1025.395000]: Waiting for basic_grasping_perception/find_objects...
+[INFO] [1753105026.186256, 1029.564000]: Picking object...
+[WARN] [1753105028.234637, 1030.504000]: ObjectManager: object0 not added yet
+[WARN] [1753105028.248825, 1030.508000]: ObjectManager: object1 not added yet
+[WARN] [1753105028.262441, 1030.519000]: ObjectManager: surface0 not added yet
+[WARN] [1753105028.719153, 1030.627000]: ObjectManager: object0 not added yet
+[WARN] [1753105028.745812, 1030.633000]: ObjectManager: object1 not added yet
+[WARN] [1753105028.766092, 1030.637000]: ObjectManager: surface0 not added yet
+position: 
+  x: -0.9725072979927063
+  y: 9.829443297348917e-05
+  z: 1.0772525072097778
+orientation: 
+  x: -0.002394637791439891
+  y: 0.001121862675063312
+  z: 0.9330805540084839
+  w: -0.35965776443481445 type: 3
+dimensions: [0.12298071384429932, 0.033022546356307]
+[INFO] [1753105030.892209, 1030.839000]: Beginning to pick.

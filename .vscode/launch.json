@@ -1,0 +1,43 @@
+{
+  // VS Code launch-file format
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // aparece na lista do Run & Debug
+      "name": "Debug – pick_and_place2.py",
+
+      // tipo de debug: extensão Python da Microsoft
+      "type": "python",
+      "request": "launch",
+
+      // caminho absoluto OU relativo ao ${workspaceFolder}
+      "program": "${workspaceFolder}/src/simple_grasping_tc/simple_grasping/scripts/pick_and_place2.py",
+
+      // diretório de trabalho – deixe no topo do workspace
+      "cwd": "${workspaceFolder}",
+
+      // mostra I/O no terminal embutido em vez de janela externa
+      "console": "integratedTerminal",
+
+      // (opcional) argumentos da linha de comando
+      "args": [
+        // "--alg", "RRT"
+      ],
+
+      /*  ───────────── Ambiente ─────────────
+         adicionamos ROS_* e PYTHONPATH para o caso
+         de você abrir o VS Code fora do “setup.bash”.
+      */
+      "env": {
+        "ROS_MASTER_URI": "http://localhost:11311",
+        "ROS_PACKAGE_PATH": "${workspaceFolder}/src:${env:ROS_PACKAGE_PATH}",
+        "PYTHONPATH":
+          "${workspaceFolder}/devel/lib/python3/dist-packages:${env:PYTHONPATH}",
+        "PYTHONUNBUFFERED": "1"
+      },
+
+      // debugar também módulos fora do projeto
+      "justMyCode": false
+    }
+  ]
+}

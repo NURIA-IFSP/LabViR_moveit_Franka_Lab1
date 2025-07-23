@@ -1,0 +1,371 @@
+[INFO] [1753104109.436845860]: Loaded gazebo_ros_control.
+[INFO] [1753104109.566583, 0.000000]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1753104109.586627, 0.000000]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1753104109.623960, 0.000000]: Loading controller: joint_state_controller
+[INFO] [1753104109.669615, 0.000000]: Calling service /gazebo/set_model_configuration
+[INFO] [1753104109.685867, 0.000000]: Set model configuration status: SetModelConfiguration: success
+[INFO] [1753104109.694715, 0.000000]: Unpausing physics
+[INFO] [1753104109.801839, 831.956000]: Loading controller: panda_arm_controller
+[INFO] [1753104110.427100, 832.106000]: Loading controller: panda_hand_controller
+[INFO] [1753104110.703342, 832.120000]: Controller Spawner: Loaded controllers: joint_state_controller, panda_arm_controller, panda_hand_controller
+[INFO] [1753104110.766787, 832.122000]: Started controllers: joint_state_controller, panda_arm_controller, panda_hand_controller
+[spawn_franka-4] process has finished cleanly
+log file: /home/ubuntu/.ros/log/65e02cdc-6635-11f0-b5ae-8ee8cb68820b/spawn_franka-4*.log
+[INFO] [1753104115.594853919, 832.740000000]: Loading robot model 'panda'...
+[INFO] [1753104123.451641443, 834.055000000]: Starting planning scene monitor
+[INFO] [1753104123.476962690, 834.056000000]: Listening to '/move_group/monitored_planning_scene'
+[INFO] [1753104123.986453147, 834.173000000]: Constructing new MoveGroup connection for group 'panda_arm' in namespace ''
+[INFO] [1753104125.471652151, 834.612000000]: Ready to take commands for planning group panda_arm.
+[INFO] [1753105013.567303011, 1025.523000000]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.
+[INFO] [1753105013.567484114, 1025.523000000]: Planning attempt 1 of at most 1
+[INFO] [1753105013.585435958, 1025.530000000]: Planner configuration 'panda_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.
+[INFO] [1753105013.592331267, 1025.532000000]: panda_arm/panda_arm: Starting planning with 1 states already in datastructure
+[INFO] [1753105013.622559477, 1025.537000000]: panda_arm/panda_arm: Created 5 states (2 start + 3 goal)
+[INFO] [1753105013.622676834, 1025.537000000]: Solution found in 0.031072 seconds
+[INFO] [1753105013.681706866, 1025.551000000]: SimpleSetup: Path simplification took 0.058843 seconds and changed from 4 to 2 states
+[INFO] [1753105026.161932614, 1029.554000000]: Controller '/panda_arm_controller' successfully finished
+[INFO] [1753105026.179617216, 1029.563000000]: Completed trajectory execution with status SUCCEEDED ...
+[INFO] [1753105026.518456893, 1029.733000000]: object support segmentation starting...
+[INFO] [1753105027.943892120, 1030.332000000]: object support segmentation done processing.
+[INFO] [1753105027.956706546, 1030.340000000]: shape grasp planning starting...
+[INFO] [1753105027.957220906, 1030.340000000]: shape grasp planning done.
+[INFO] [1753105027.969384956, 1030.352000000]: shape grasp planning starting...
+[INFO] [1753105027.970250542, 1030.352000000]: shape grasp planning done.
+[WARN] [1753105028.236316151, 1030.507000000]: Empty quaternion found in pose message. Setting to neutral orientation.
+[WARN] [1753105028.283207435, 1030.529000000]: Empty quaternion found in pose message. Setting to neutral orientation.
+[WARN] [1753105028.788614654, 1030.641000000]: Empty quaternion found in pose message. Setting to neutral orientation.
+[INFO] [1753105030.906715480, 1030.843000000]: Planning attempt 1 of at most 1
+[INFO] [1753105030.986631979, 1030.871000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105030.988842989, 1030.871000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105030.990343678, 1030.871000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105030.991488168, 1030.872000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105030.993361675, 1030.872000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105030.995852229, 1030.872000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105030.999698594, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105031.000085637, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105031.001541248, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105031.002697261, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105031.004322965, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 7
+[INFO] [1753105031.005678081, 1030.873000000]: Added plan for pipeline 'pick'. Queue is now of size 8
+[INFO] [1753105031.010560396, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 9
+[INFO] [1753105031.013114391, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 10
+[INFO] [1753105031.013160393, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 11
+[INFO] [1753105031.013197991, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 12
+[INFO] [1753105031.013232952, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 13
+[INFO] [1753105031.013267076, 1030.874000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[ERROR] [1753105031.029784778, 1030.876000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.030164197, 1030.876000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105031.033646289, 1030.876000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.033840161, 1030.876000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.034366401, 1030.876000000]: Manipulation plan 2 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105031.044518974, 1030.879000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.046167193, 1030.879000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.052619379, 1030.880000000]: Manipulation plan 15 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105031.052697146, 1030.880000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.053004647, 1030.880000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105031.064224657, 1030.881000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[INFO] [1753105031.065549939, 1030.883000000]: Manipulation plan 5 failed at stage 'reachable & valid pose filter' on thread 0
+[ERROR] [1753105031.065736312, 1030.883000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105031.066723673, 1030.883000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.070393184, 1030.883000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.085024131, 1030.888000000]: Manipulation plan 3 failed at stage 'reachable & valid pose filter' on thread 0
+[ERROR] [1753105031.087175820, 1030.889000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.087969518, 1030.890000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105031.091338870, 1030.890000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.091533125, 1030.890000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105031.094857407, 1030.891000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.098764446, 1030.892000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.107382090, 1030.892000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105031.115086136, 1030.893000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.119888192, 1030.894000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.121332576, 1030.894000000]: Manipulation plan 16 failed at stage 'reachable & valid pose filter' on thread 0
+[ERROR] [1753105031.123699432, 1030.894000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105031.124425158, 1030.895000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105031.137721837, 1030.897000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 2
+[WARN] [1753105031.140232385, 1030.897000000]: All supplied grasps failed. Retrying last grasp in verbose mode.
+[INFO] [1753105031.141142623, 1030.897000000]: Re-added last failed plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105031.157260907, 1030.903000000]: IK failed
+[INFO] [1753105031.165430059, 1030.906000000]: IK failed
+[INFO] [1753105031.167589136, 1030.906000000]: Sampler failed to produce a state
+[INFO] [1753105031.167722683, 1030.906000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105031.169495300, 1030.909000000]: Pickup planning completed after 0.233095 seconds
+[INFO] [1753105033.721638968, 1031.446000000]: Planning attempt 1 of at most 1
+[INFO] [1753105033.721903041, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105033.721957617, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105033.721993622, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105033.722037580, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105033.722077554, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105033.722108471, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105033.722146207, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105033.722178666, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105033.722213046, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105033.722243913, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105033.722279245, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 7
+[INFO] [1753105033.722317968, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 8
+[INFO] [1753105033.722369772, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 9
+[INFO] [1753105033.722415434, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 10
+[INFO] [1753105033.722508817, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 11
+[INFO] [1753105033.722570904, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 12
+[INFO] [1753105033.722621100, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 13
+[INFO] [1753105033.722730398, 1031.446000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[ERROR] [1753105033.740089407, 1031.449000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.744294832, 1031.450000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105033.745156195, 1031.450000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[INFO] [1753105033.745746451, 1031.450000000]: Manipulation plan 7 failed at stage 'reachable & valid pose filter' on thread 2
+[INFO] [1753105033.745930679, 1031.450000000]: Manipulation plan 2 failed at stage 'reachable & valid pose filter' on thread 0
+[ERROR] [1753105033.746270268, 1031.450000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105033.766188057, 1031.455000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.767272761, 1031.455000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105033.769457714, 1031.455000000]: Manipulation plan 15 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105033.771108130, 1031.456000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.771261478, 1031.456000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105033.773753324, 1031.456000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.774079906, 1031.456000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105033.786852264, 1031.457000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.787789690, 1031.459000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105033.791832402, 1031.459000000]: Manipulation plan 3 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105033.798795072, 1031.460000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.798930665, 1031.460000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105033.801453533, 1031.461000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.803805380, 1031.461000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105033.810951671, 1031.464000000]: Manipulation plan 14 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105033.812753373, 1031.464000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105033.813320555, 1031.464000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105033.814373257, 1031.465000000]: Manipulation plan 16 failed at stage 'reachable & valid pose filter' on thread 3
+[INFO] [1753105033.819757052, 1031.466000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105033.826552129, 1031.469000000]: Manipulation plan 13 failed at stage 'reachable & valid pose filter' on thread 2
+[INFO] [1753105033.830972967, 1031.471000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 1
+[WARN] [1753105033.833038027, 1031.471000000]: All supplied grasps failed. Retrying last grasp in verbose mode.
+[INFO] [1753105033.833281556, 1031.471000000]: Re-added last failed plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105033.841763474, 1031.474000000]: IK failed
+[INFO] [1753105033.847264461, 1031.476000000]: IK failed
+[INFO] [1753105033.847540964, 1031.476000000]: Sampler failed to produce a state
+[INFO] [1753105033.847797534, 1031.476000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105033.848281176, 1031.476000000]: Pickup planning completed after 0.111271 seconds
+[INFO] [1753105035.060031324, 1031.985000000]: Planning attempt 1 of at most 1
+[INFO] [1753105035.060342634, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105035.060416085, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105035.060469471, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105035.060522670, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105035.060574252, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105035.060624143, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105035.060676185, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 7
+[INFO] [1753105035.060728385, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 8
+[INFO] [1753105035.060778592, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 9
+[INFO] [1753105035.060835904, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 10
+[INFO] [1753105035.060888961, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 11
+[INFO] [1753105035.060921009, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 12
+[INFO] [1753105035.060951903, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 13
+[INFO] [1753105035.061002751, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[INFO] [1753105035.061035371, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 15
+[INFO] [1753105035.061077167, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 16
+[INFO] [1753105035.061108691, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 17
+[INFO] [1753105035.061138733, 1031.985000000]: Added plan for pipeline 'pick'. Queue is now of size 18
+[ERROR] [1753105035.071027130, 1031.987000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.071365495, 1031.987000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105035.073348505, 1031.987000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.073525847, 1031.987000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.080493501, 1031.989000000]: Manipulation plan 0 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105035.084444387, 1031.990000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.084593774, 1031.990000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105035.087454297, 1031.992000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.087615542, 1031.992000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.088138685, 1031.992000000]: Manipulation plan 2 failed at stage 'reachable & valid pose filter' on thread 1
+[ERROR] [1753105035.092219610, 1031.993000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.095731336, 1031.995000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105035.097484719, 1031.995000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.098982019, 1031.997000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.100493539, 1031.997000000]: Manipulation plan 15 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105035.102085994, 1031.997000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.102273286, 1031.997000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105035.108811400, 1032.000000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.108971258, 1032.000000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.110372152, 1032.000000000]: Manipulation plan 3 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105035.112991219, 1032.000000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.119902056, 1032.003000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.121787670, 1032.003000000]: Manipulation plan 16 failed at stage 'reachable & valid pose filter' on thread 1
+[ERROR] [1753105035.123038594, 1032.003000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.123182624, 1032.003000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105035.132514739, 1032.006000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105035.133697226, 1032.006000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105035.133942796, 1032.006000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105035.150368570, 1032.008000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 1
+[WARN] [1753105035.150926880, 1032.008000000]: All supplied grasps failed. Retrying last grasp in verbose mode.
+[INFO] [1753105035.151098050, 1032.008000000]: Re-added last failed plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105035.162046266, 1032.012000000]: IK failed
+[INFO] [1753105035.167557540, 1032.013000000]: IK failed
+[INFO] [1753105035.177086426, 1032.018000000]: Sampler failed to produce a state
+[INFO] [1753105035.179608629, 1032.018000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 3
+[INFO] [1753105035.182480211, 1032.018000000]: Pickup planning completed after 0.090763 seconds
+[INFO] [1753105036.508141708, 1032.543000000]: Planning attempt 1 of at most 1
+[INFO] [1753105036.508463307, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105036.508518511, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105036.508552363, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105036.508587563, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105036.508616619, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105036.508658754, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105036.508700931, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105036.508726134, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 7
+[INFO] [1753105036.508752452, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 8
+[INFO] [1753105036.508780195, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 9
+[INFO] [1753105036.508805175, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 10
+[INFO] [1753105036.508832530, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 11
+[INFO] [1753105036.508859160, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 12
+[INFO] [1753105036.508887614, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 13
+[INFO] [1753105036.508913551, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[INFO] [1753105036.508956329, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 15
+[INFO] [1753105036.508997835, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 16
+[INFO] [1753105036.509033109, 1032.543000000]: Added plan for pipeline 'pick'. Queue is now of size 17
+[ERROR] [1753105036.519134014, 1032.545000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.519270384, 1032.545000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105036.535906246, 1032.551000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.536043486, 1032.551000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105036.540642845, 1032.552000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[INFO] [1753105036.540755090, 1032.552000000]: Manipulation plan 2 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105036.541134445, 1032.552000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105036.551094671, 1032.556000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.552677552, 1032.557000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105036.566956512, 1032.562000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.570444813, 1032.563000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105036.579378549, 1032.566000000]: Manipulation plan 15 failed at stage 'reachable & valid pose filter' on thread 1
+[ERROR] [1753105036.581766600, 1032.566000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.581913909, 1032.566000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105036.589310060, 1032.568000000]: Manipulation plan 10 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105036.596908006, 1032.571000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.597060501, 1032.571000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105036.598481013, 1032.572000000]: Manipulation plan 11 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105036.603684276, 1032.575000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.603841865, 1032.575000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105036.612712346, 1032.580000000]: Manipulation plan 3 failed at stage 'reachable & valid pose filter' on thread 1
+[INFO] [1753105036.613411781, 1032.580000000]: Manipulation plan 16 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105036.624963170, 1032.584000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.625105920, 1032.584000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105036.628923208, 1032.588000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105036.629070326, 1032.588000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105036.629231876, 1032.588000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 3
+[INFO] [1753105036.633696026, 1032.590000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 2
+[WARN] [1753105036.637487652, 1032.592000000]: All supplied grasps failed. Retrying last grasp in verbose mode.
+[INFO] [1753105036.637811035, 1032.592000000]: Re-added last failed plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105036.644212036, 1032.596000000]: IK failed
+[INFO] [1753105036.655314882, 1032.603000000]: IK failed
+[INFO] [1753105036.655415232, 1032.603000000]: Sampler failed to produce a state
+[INFO] [1753105036.655464158, 1032.603000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105036.663379891, 1032.607000000]: Pickup planning completed after 0.129176 seconds
+[INFO] [1753105038.925940336, 1033.123000000]: Planning attempt 1 of at most 1
+[INFO] [1753105038.926235145, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 1
+[INFO] [1753105038.926304027, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 2
+[INFO] [1753105038.926358721, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 3
+[INFO] [1753105038.926407997, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 4
+[INFO] [1753105038.926455714, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 5
+[INFO] [1753105038.926506034, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 6
+[INFO] [1753105038.926555615, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 7
+[INFO] [1753105038.926609438, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 8
+[INFO] [1753105038.926657836, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 9
+[INFO] [1753105038.926707792, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 10
+[INFO] [1753105038.926754857, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 11
+[INFO] [1753105038.926811506, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 12
+[INFO] [1753105038.926857888, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 13
+[INFO] [1753105038.926937253, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[INFO] [1753105038.926996384, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 15
+[INFO] [1753105038.927067408, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 16
+[INFO] [1753105038.927129690, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 17
+[INFO] [1753105038.928494712, 1033.123000000]: Added plan for pipeline 'pick'. Queue is now of size 14
+[ERROR] [1753105038.931985806, 1033.123000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105038.937209300, 1033.125000000]: [pick:2] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105038.939351313, 1033.126000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105038.940780113, 1033.126000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105038.947474071, 1033.127000000]: Manipulation plan 2 failed at stage 'reachable & valid pose filter' on thread 1
+[ERROR] [1753105038.956688123, 1033.130000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105038.962946256, 1033.130000000]: [pick:1] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105038.966716867, 1033.132000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105038.975926903, 1033.136000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105038.976328023, 1033.136000000]: Manipulation plan 15 failed at stage 'reachable & valid pose filter' on thread 0
+[ERROR] [1753105038.986539807, 1033.138000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105038.990367752, 1033.138000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105038.998211571, 1033.142000000]: Manipulation plan 14 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105039.005749141, 1033.143000000]: Manipulation plan 6 failed at stage 'reachable & valid pose filter' on thread 1
+[INFO] [1753105039.010313497, 1033.144000000]: Manipulation plan 3 failed at stage 'reachable & valid pose filter' on thread 3
+[INFO] [1753105039.012689113, 1033.145000000]: Manipulation plan 11 failed at stage 'reachable & valid pose filter' on thread 2
+[ERROR] [1753105039.014420196, 1033.145000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105039.015409321, 1033.146000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105039.029779637, 1033.149000000]: Manipulation plan 16 failed at stage 'reachable & valid pose filter' on thread 3
+[ERROR] [1753105039.034463006, 1033.151000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105039.038496355, 1033.152000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[ERROR] [1753105039.038998313, 1033.152000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105039.039945853, 1033.152000000]: [pick:3] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105039.040066095, 1033.152000000]: Manipulation plan 4 failed at stage 'reachable & valid pose filter' on thread 2
+[INFO] [1753105039.051949073, 1033.160000000]: Manipulation plan 17 failed at stage 'reachable & valid pose filter' on thread 0
+[INFO] [1753105039.061499153, 1033.166000000]: Manipulation plan 12 failed at stage 'reachable & valid pose filter' on thread 1
+[WARN] [1753105039.064527457, 1033.169000000]: All supplied grasps failed. Retrying last grasp in verbose mode.
+[INFO] [1753105039.065113841, 1033.169000000]: Re-added last failed plan for pipeline 'pick'. Queue is now of size 1
+[ERROR] [1753105039.071666512, 1033.175000000]: Variable 'l_gripper_finger_joint' is not known to model 'panda'
+Exception thrown.
+[ERROR] [1753105039.073041055, 1033.176000000]: [pick:0] Variable 'l_gripper_finger_joint' is not known to model 'panda'
+[INFO] [1753105039.077204465, 1033.176000000]: Pickup planning completed after 0.138449 seconds
+^C[basic_grasping_perception-11] killing on exit
+[kinect_optical_pub-10] killing on exit
+[kinect_pose_pub-9] killing on exit
+[rviz_da90d5d93efc_2199_3313253576477047449-8] killing on exit
+[move_group-7] killing on exit
+[controller_spawner-5] killing on exit
+[gazebo_gui-3] killing on exit
+[INFO] [1753105039.867570, 1033.458000]: Shutting down spawner. Stopping and unloading controllers...
+[robot_state_publisher-6] killing on exit
+[gazebo-2] killing on exit
+[INFO] [1753105039.877716, 1033.461000]: Stopping all controllers...
+[INFO] [1753105039.943344, 1033.482000]: Unloading all loaded controllers...
+[INFO] [1753105039.958753, 1033.484000]: Trying to unload panda_hand_controller
+[INFO] [1753105040.180974, 1033.495000]: Succeeded in unloading panda_hand_controller
+[INFO] [1753105040.203834, 1033.495000]: Trying to unload panda_arm_controller
+[WARN] [1753105040.515087, 1033.495000]: Controller Spawner error while taking down controllers: transport error completing service call: unable to receive data from sender, check sender's logs for details
+^C^C^C^C^C^C
+[gazebo_gui-3] escalating to SIGTERM
